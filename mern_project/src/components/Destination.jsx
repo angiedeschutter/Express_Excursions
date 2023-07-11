@@ -15,7 +15,7 @@ function Destination() {
     const { name } = useParams() //uses the continent param
     const getDestination = async () => {
         try {
-            const findDestination = await fetch(`http://localhost:4000/destinations/${name}`)
+            const findDestination = await fetch(`${process.env.REACT_APP_SERVER_URL}destinations/${name}`)
             const jsonData = await findDestination.json()
             setDestination(jsonData)
         } catch (Error) {
@@ -26,7 +26,7 @@ function Destination() {
     //DELETE DESTINATION FUNCTION
     const deleteDestination = async () => {
         try {
-            await fetch(`http://localhost:4000/destinations/${name}`,
+            await fetch(`${process.env.REACT_APP_SERVER_URL}destinations/${name}`,
                 { method: "DELETE" })
             navigate('/continents') //redirects back to parent destination list
         } catch (Error) {

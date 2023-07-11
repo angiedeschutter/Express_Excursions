@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node back-end/index.js",
-    "Build": "yarn",
-    "Runtime":"Node"
+    "start": "node index.js"
+
   },
   "keywords": [],
   "author": "",
